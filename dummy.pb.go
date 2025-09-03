@@ -27,7 +27,9 @@ const (
 type Dummy struct {
 	state protoimpl.MessageState `protogen:"open.v1"`
 	// Id of this event.
-	Id            string `protobuf:"bytes,1,opt,name=Id,proto3" json:"Id,omitempty"`
+	Id string `protobuf:"bytes,1,opt,name=Id,proto3" json:"Id,omitempty"`
+	// Id of this event.
+	Id2           string `protobuf:"bytes,2,opt,name=Id2,proto3" json:"Id2,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -69,13 +71,21 @@ func (x *Dummy) GetId() string {
 	return ""
 }
 
+func (x *Dummy) GetId2() string {
+	if x != nil {
+		return x.Id2
+	}
+	return ""
+}
+
 var File_dummy_proto protoreflect.FileDescriptor
 
 const file_dummy_proto_rawDesc = "" +
 	"\n" +
-	"\vdummy.proto\x12\x06events\"\x17\n" +
+	"\vdummy.proto\x12\x06events\")\n" +
 	"\x05Dummy\x12\x0e\n" +
-	"\x02Id\x18\x01 \x01(\tR\x02IdB\n" +
+	"\x02Id\x18\x01 \x01(\tR\x02Id\x12\x10\n" +
+	"\x03Id2\x18\x02 \x01(\tR\x03Id2B\n" +
 	"Z\b.;eventsb\x06proto3"
 
 var (
