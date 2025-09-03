@@ -20,7 +20,7 @@ jobs:
         with:
           go-version: ${{ env.goversion }}
       - name: Run tests
-        run: go test -v  -covermode=count ./...
+        run: go mod download && go test -v  -covermode=count ./...
 
   release:
     name: Go Package Release
