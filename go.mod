@@ -1,3 +1,3 @@
 module github.com/tommzn/hdb-events-go
 
-go 1.13
+go 1.24
